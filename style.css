@@ -1,0 +1,284 @@
+/* font weights 300, 400, 600, 800 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap"); /* CSS RESET */
+/* html {
+  box-sizing: border-box;
+  font-size: 16px;
+} */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #21222a;
+  font-weight: 400;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+.nav-bar {
+  position: fixed;
+  background-color: #21222a;
+  width: 100%;
+  z-index: 100;
+}
+.max-width {
+  max-width: 1200px;
+  align-items: center;
+  margin: auto;
+  display: flex;
+}
+.nav-name {
+  margin: 1rem 0 1rem 0;
+  padding: 0 1rem;
+  flex-grow: 1;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+.nav-links {
+  margin: 1rem 0 1rem 0;
+  font-size: 0.75rem;
+  display: flex;
+}
+
+.link-item {
+  padding: 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.link-item:hover {
+  color: #ff5515;
+}
+.section-divider {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: auto;
+}
+#hero {
+  height: 100vh;
+  background-image: url("./assets/header-bg3.jpg");
+  background-position: fixed;
+  background-attachment: fixed;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-color: rgb(247, 230, 217);
+  position: relative;
+}
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  /* position: fixed; */
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#hero-text {
+  color: white;
+  font-weight: 700;
+  font-size: 5rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30vh 1rem 0 1rem;
+  z-index: 10;
+}
+@media only screen and (max-width: 500px) {
+  #hero-text {
+    font-size: 3rem;
+  }
+}
+#hero-body {
+  color: white;
+  font-weight: 500;
+  font-size: 1.75rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 2rem;
+  z-index: 10;
+}
+#about-photo {
+  margin-top: 2.5rem;
+  max-height: 300px;
+}
+
+#select-wrapper {
+  background-image: url("./assets/topo-lines.jpg");
+  background-position: fixed;
+  background-attachment: fixed;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+.riley-highlight {
+  color: #ff5515;
+}
+
+.subhead {
+  font-weight: 700;
+  margin: 5.5rem 0 1rem 0;
+  padding: 0 1rem;
+}
+.subhead-alt {
+  font-weight: 700;
+  padding: 5.5rem 1rem 1rem 1rem;
+  color: #ff5515;
+}
+.copy {
+  font-weight: 500;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+}
+.center {
+  text-align: center;
+}
+.grid-container {
+  margin: auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.grid-container-md {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  justify-content: stretch;
+  gap: 3rem;
+  margin: auto;
+}
+.grid-container-mx {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  /* justify-content: stretch; */
+  justify-content: center;
+
+  gap: 0.5rem;
+  margin: 2rem 0 5rem 0;
+}
+.mx-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 3rem 0;
+}
+
+.mx-item img {
+  max-height: 75px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebeef4;
+  border-radius: 10px;
+  margin: 1rem 0 1rem 0;
+  height: 200px;
+  padding: 20px;
+}
+
+.card-wrapper {
+  margin: 1rem 0 1rem 0;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+.card-image {
+  border-radius: 1rem 1rem 0 0;
+  background-color: gray;
+  background-image: url("./assets/projects/five-apple-feedback-overview.jpeg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 150px;
+}
+.card-body {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: white;
+}
+.card-footer {
+  border-radius: 0 0 1rem 1rem;
+  height: 20px;
+  padding: 1rem;
+  background-color: white;
+}
+
+.card-header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ff5515;
+}
+
+.card-copy {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+.footer {
+  background-color: #21222a;
+}
+
+input,
+textarea,
+#message-button {
+  font-family: "Montserrat", sans-serif;
+
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: solid 1px #ff5515;
+  color: white;
+  background-color: #21222a;
+  border-radius: 1rem;
+}
+
+#message-button {
+  color: #21222a;
+  background-color: #ff5515;
+}
+
+textarea {
+  height: 200px;
+}
