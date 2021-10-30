@@ -288,7 +288,7 @@ textarea {
   flex-direction: column;
 }
 @keyframes pop {
-  0% {
+  from {
     transform: translateX(0);
     transform: scale(1);
   }
@@ -296,7 +296,7 @@ textarea {
     transform: translateX(0);
     transform: scale(1.5);
   }
-  100% {
+  to {
     transform: translateX(0);
     transform: scale(1);
   }
