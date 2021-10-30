@@ -144,8 +144,7 @@ h2 {
 #select-wrapper {
   background-image: url("./assets/topo-lines.jpg");
   background-position: fixed;
-  background-attachment: fixed;
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .riley-highlight {
@@ -265,7 +264,7 @@ textarea,
 #message-button {
   font-family: "Montserrat", sans-serif;
 
-  width: 100%;
+  /* width: 100%; */
   font-size: 1.25rem;
   padding: 1rem;
   margin: 1rem;
@@ -282,4 +281,23 @@ textarea,
 
 textarea {
   height: 200px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.techanimate {
+  animation: pop 1s ease-in-out;
 }
