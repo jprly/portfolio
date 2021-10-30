@@ -2,10 +2,10 @@ console.log("connected");
 const techItems = document.querySelector("#firstobserver");
 const allTechItems = document.querySelectorAll(".techicon");
 console.log(techItems);
+let i = 0;
 
 const callback = (entries, observer) => {
   if (entries[0].isIntersecting) {
-    let i = 0;
     const startAnimation = () => {
       setTimeout(() => {
         if (i < allTechItems.length) {
@@ -18,6 +18,7 @@ const callback = (entries, observer) => {
     startAnimation();
   }
   if (!entries[0].isIntersecting) {
+    i = 0;
     allTechItems.forEach((item) => {
       item.classList.remove("techanimate");
     });
