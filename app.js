@@ -6,6 +6,8 @@ let i = 0;
 
 const callback = (entries, observer) => {
   if (entries[0].isIntersecting) {
+    console.log("now visible");
+    console.log(entries);
     const startAnimation = () => {
       setTimeout(() => {
         if (i < allTechItems.length) {
