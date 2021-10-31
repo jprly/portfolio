@@ -36,3 +36,8 @@ let options = {
 
 let observer = new IntersectionObserver(callback, options);
 observer.observe(techItems);
+
+const portButton = document.querySelector("#portfolio-button");
+portButton.addEventListener("mouseenter", (e) => {
+  console.log("enter", e);
+});

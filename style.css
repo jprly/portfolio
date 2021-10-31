@@ -72,10 +72,16 @@ h2 {
   font-size: 0.75rem;
   display: flex;
 }
+#footer-links {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  padding-right: 4rem;
+}
 
 .link-item {
   padding: 1rem;
-  color: white;
+  color: #b8bac7;
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -133,7 +139,7 @@ h2 {
 }
 #hero-inner {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 1rem;
   display: flex;
 }
@@ -144,7 +150,7 @@ h2 {
   font-size: 5rem;
   z-index: 10;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 685px) {
   #hero-text {
     font-size: 3rem;
   }
@@ -176,8 +182,17 @@ h2 {
   color: #ff5515;
 }
 .hero-cta {
-  margin-top: 2rem;
+  display: flex;
 }
+
+@media only screen and (max-width: 540px) {
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+}
+
 .link-button {
   background-color: white;
   padding: 1rem 3rem;
@@ -224,16 +239,29 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   padding-top: 5rem;
-  align-items: center;
-  margin-bottom: 6rem;
+  align-items: flex-start;
+}
+#copyright {
+  padding: 2rem 0;
+}
+#copyright-text {
+  margin: auto;
+  max-width: 1200px;
+  color: white;
 }
 .grid-container-md {
   max-width: 1200px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
   justify-content: stretch;
   gap: 3rem;
   margin: auto;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 700px) {
+  .grid-container-md {
+    grid-template-columns: 1fr;
+  }
 }
 .grid-container-mx {
   display: grid;
@@ -281,6 +309,14 @@ h2 {
   background-size: cover;
   height: 150px;
 }
+.card-image-mycfp {
+  border-radius: 1rem 1rem 0 0;
+  background-color: gray;
+  background-image: url("./assets/projects/my-cfp.jpg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 150px;
+}
 .card-body {
   flex-grow: 1;
   padding: 2rem;
@@ -291,8 +327,23 @@ h2 {
   height: 20px;
   padding: 1rem;
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
+.card-links {
+  display: flex;
+}
+.card-link {
+  margin: 0 1rem 0 0;
+}
+.learn-more-link {
+  background-color: #ff5515;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
 .card-header {
   font-size: 1.25rem;
   font-weight: 600;
@@ -316,7 +367,7 @@ textarea,
   /* width: 100%; */
   font-size: 1.25rem;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0 1rem 2rem 0;
   border: solid 1px #ff5515;
   color: white;
   background-color: #21222a;
@@ -366,4 +417,8 @@ textarea {
 }
 .techanimate {
   animation: pop 1s ease-in-out;
+}
+
+.footer-content {
+  color: white;
 }
