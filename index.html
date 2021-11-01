@@ -26,7 +26,7 @@
     <div id="hero">
       <div id="hero-inner">
         <div id="compass-wrapper">
-          <div class="test">
+          <div class="compass">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
   <g>
@@ -71,7 +71,7 @@
   </svg>
           </div>
           <!-- compass bloom -->
-          <div class="test2">
+          <div class="compass-bloom">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
   <g>
@@ -107,8 +107,9 @@
             />
           </div></br>
           <div class="hero-cta">
-            <a id="portfolio-button" class="link-button" href="#">Portfolio</a>
-            <a id="contact-button" class="link-button" href="#">Contact</a>
+            <div class="button-outline" style="background-color: #ff5515; color: white;">Portfolio</div>
+
+            <div class="button-outline" style="color: #ff5515;">Contact</div>
           </div>
         </div>
         
@@ -158,9 +159,9 @@
       </div>
     </div>
     <div class="grid-container-mx">
-      <div class="mx-item">
+      <div class="mx-item"           id="firstobserver"
+      >
         <img
-          id="firstobserver"
           class="techicon"
           src="./assets/tech/html.png"
           alt=""
@@ -331,7 +332,7 @@
             <input type="text" name="name" placeholder="Name" />
             <input type="email" name="email" placeholder="Email" />
             <textarea name="message" placeholder="Message..."></textarea>
-            <button id="message-button">Send Message</button>
+            <button class="button-outline" style="border: 0; color: #ff5515;">Send Message</button>
           </form>
         </div>
       </div>
