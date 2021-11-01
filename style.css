@@ -75,7 +75,6 @@ h2 {
 #footer-links {
   display: flex;
   color: white;
-  justify-content: space-between;
   padding-right: 4rem;
 }
 
@@ -122,6 +121,17 @@ h2 {
   position: relative;
   top: -100px;
   animation: spin 4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.7);
+  }
 }
 
 @keyframes spin {
@@ -191,7 +201,35 @@ h2 {
 }
 #about-photo {
   /* margin-top: 2.5rem; */
-  max-height: 300px;
+  width: 300px;
+  height: 300px;
+
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#about-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  border: 1px dashed;
+  border-radius: 50%;
+  animation: pulse 4s ease-in-out infinite;
+}
+#about-animation-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(255 85 21 / 10%);
+  width: 300px;
+  height: 300px;
+  border: 2px solid #ff5515;
+  border-radius: 50%;
+  animation: pulse 4s ease-in-out infinite;
+  animation-delay: 1s;
 }
 
 #select-wrapper {
@@ -291,6 +329,7 @@ h2 {
   left: -6px;
   opacity: 1;
   transition: all 0.25s ease;
+  z-index: 5;
 }
 
 .subhead-about {
@@ -327,6 +366,23 @@ h2 {
   padding-top: 5rem;
   align-items: flex-start;
   justify-content: center;
+}
+.grid-container-exp {
+  margin: auto;
+  padding: 0 1rem;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+  gap: 1rem;
+  padding-top: 5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+@media screen and (max-width: 700px) {
+  .grid-container-exp {
+    grid-template-columns: 1fr;
+
+  }
 }
 #copyright {
   padding: 2rem 0;
@@ -389,11 +445,12 @@ h2 {
 
   flex-direction: column;
   border-radius: 1rem;
+  z-index: 10;
 }
 .card-image {
   border-radius: 1rem 1rem 0 0;
   background-color: gray;
-  background-image: url("./assets/projects/five-apple-feedback-overview.jpeg");
+  background-image: url("./assets/projects/five-apple-feedback-overview.jpg");
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   height: 150px;
@@ -401,7 +458,15 @@ h2 {
 .card-image-mycfp {
   border-radius: 1rem 1rem 0 0;
   background-color: gray;
-  background-image: url("./assets/projects/my-cfp.jpg");
+  background-image: url("./assets/projects/project-overview-mycfp.jpg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 150px;
+}
+.card-image-placeholder {
+  border-radius: 1rem 1rem 0 0;
+  background-color: gray;
+  background-image: url("./assets/projects/placeholder.jpg");
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   height: 150px;
@@ -410,6 +475,7 @@ h2 {
   flex-grow: 1;
   padding: 2rem;
   background-color: white;
+  z-index: 50;
 }
 .card-footer {
   border-radius: 0 0 1rem 1rem;
@@ -419,6 +485,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 50;
 }
 .card-links {
   display: flex;
@@ -443,6 +510,17 @@ h2 {
 .card-copy {
   font-size: 1rem;
   line-height: 1.75rem;
+}
+
+.experience-item {
+  border-left: #ff5515 4px solid;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+.experience-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 .footer {
   background-color: #21222a;
@@ -509,5 +587,13 @@ textarea {
 }
 
 .footer-content {
-  color: white;
+  color: #b8bac7;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.footer-content p {
+  color: #b8bac7;
 }
