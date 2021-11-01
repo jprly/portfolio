@@ -1,5 +1,19 @@
 const techItems = document.querySelector("#firstobserver");
 const allTechItems = document.querySelectorAll(".techicon");
+const burgerButton = document.querySelector("#burger-button");
+const burgerMenu = document.querySelector("#burger-menu");
+
+let burgerMenuVisible = false;
+
+burgerButton.addEventListener("click", () => {
+  if (burgerMenuVisible) {
+    burgerMenu.classList.remove("showMenu");
+    burgerMenuVisible = false;
+  } else {
+    burgerMenu.classList.add("showMenu");
+    burgerMenuVisible = true;
+  }
+});
 
 let i = 0;
 let annimationActive = false;

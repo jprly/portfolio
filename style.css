@@ -51,7 +51,7 @@ h2 {
   position: fixed;
   background-color: #21222a;
   width: 100%;
-  z-index: 100;
+  z-index: 500;
 }
 .max-width {
   max-width: 1200px;
@@ -71,6 +71,27 @@ h2 {
   margin: 1rem 0 1rem 0;
   font-size: 0.75rem;
   display: flex;
+}
+#burger-button {
+  columns: white;
+  display: none;
+}
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+}
+.showMenu {
+  transform: translateY(0);
 }
 #footer-links {
   display: flex;
@@ -183,6 +204,14 @@ h2 {
   z-index: 10;
 }
 @media only screen and (max-width: 685px) {
+  #burger-button {
+    color: white;
+    display: block;
+    padding-right: 1rem;
+  }
+  .nav-links {
+    display: none;
+  }
   #hero-text {
     font-size: 3rem;
   }
@@ -234,6 +263,7 @@ h2 {
 
 #select-wrapper {
   background-image: url("./assets/topo-lines.jpg");
+  background-color: #eeebe9;
   background-position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -381,7 +411,23 @@ h2 {
 @media screen and (max-width: 700px) {
   .grid-container-exp {
     grid-template-columns: 1fr;
-
+  }
+  .grid-container-mx {
+    display: flex !important;
+    justify-content: space-around !important;
+  }
+  .mx-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem;
+  }
+  .mx-item img {
+    height: 30px;
+    gap: 0.1rem;
+  }
+  #select-wrapper {
+    background-image: none;
   }
 }
 #copyright {
