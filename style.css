@@ -97,8 +97,8 @@ h2 {
   height: auto;
 }
 #hero {
-  height: 100vh;
-  min-height: 700px;
+  min-height: 100vh;
+  /* min-height: 700px; */
   display: flex;
   align-items: center;
 
@@ -142,6 +142,28 @@ h2 {
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
+}
+.basichr {
+  border: solid #ff5515 3px;
+  width: 100px;
+  margin-left: 0;
+}
+@media only screen and (max-width: 500px) {
+  .basichr {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #hero-inner {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+    text-align: center;
+  }
+  #compass-wrapper {
+    align-self: center;
+    height: 100px;
+    margin-bottom: 4rem;
+  }
 }
 
 #hero-text {
@@ -257,6 +279,20 @@ h2 {
   opacity: 1;
 }
 
+.card-wrapper::before {
+  content: "";
+  position: absolute;
+  border: solid #ff5515 1px;
+  border-radius: 1.125rem;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  top: -6px;
+  left: -6px;
+  opacity: 1;
+  transition: all 0.25s ease;
+}
+
 .subhead-about {
   font-weight: 600;
   padding: 0 1rem;
@@ -283,12 +319,14 @@ h2 {
 }
 .grid-container {
   margin: auto;
+  padding: 0 1rem;
   max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   padding-top: 5rem;
   align-items: flex-start;
+  justify-content: center;
 }
 #copyright {
   padding: 2rem 0;
@@ -347,6 +385,8 @@ h2 {
   margin: 1rem 0 1rem 0;
   min-height: 400px;
   display: flex;
+  position: relative;
+
   flex-direction: column;
   border-radius: 1rem;
 }
