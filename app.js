@@ -2,8 +2,23 @@ const techItems = document.querySelector("#firstobserver");
 const allTechItems = document.querySelectorAll(".techicon");
 const burgerButton = document.querySelector("#burger-button");
 const burgerMenu = document.querySelector("#burger-menu");
+const contactSection = document.getElementById("contact-info");
+const navLinks = document.querySelectorAll(".section-navigator");
 
 let burgerMenuVisible = false;
+
+navLinks.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    burgerMenu.classList.remove("showMenu");
+    burgerMenuVisible = false;
+    const targetSection = document.getElementById(e.target.dataset.section);
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  });
+});
 
 burgerButton.addEventListener("click", () => {
   if (burgerMenuVisible) {
