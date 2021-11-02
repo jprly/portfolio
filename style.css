@@ -115,7 +115,13 @@ h2 {
 #footer-links {
   display: flex;
   color: white;
-  padding-right: 4rem;
+  /* padding-right: 4rem; */
+}
+
+#footer-photo {
+  max-width: 125px;
+  border-radius: 1rem;
+  border: 1px solid #ff5515;
 }
 
 .link-item {
@@ -422,7 +428,7 @@ h2 {
   max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 3rem;
   padding-top: 5rem;
   align-items: flex-start;
   justify-content: center;
@@ -664,7 +670,7 @@ textarea {
 
 .footer-content {
   color: #b8bac7;
-  padding-right: 2rem;
+  /* padding-right: 2rem; */
   margin-bottom: 2rem;
   font-size: 1.25rem;
   line-height: 2rem;
