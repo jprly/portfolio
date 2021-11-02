@@ -222,23 +222,12 @@
           </div>
         </div>
         <div class="">
-          <form id="contact-form">
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email" />
-            <textarea name="message" placeholder="Message"></textarea>
-            <button
-              class="button-outline"
-              style="
-                border: 0;
-                color: white;
-                background-color: #ff5515;
-                font-size: 1.2rem;
-                font-weight: 400;
-              "
-            >
-              Send Message
-            </button>
-          </form>
+            <form id="contact-form" name="contact" method="POST" data-netlify="true">
+                <input type="text" name="name" placeholder="Name" />
+                <input type="email" name="email" placeholder="Email" />
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit" class="button-outline" style="border: 0; color: white; background-color: #ff5515; font-size: 1.2rem; font-weight: 400;">Send Message</button>
+              </form>
         </div>
       </div>
     </div>
