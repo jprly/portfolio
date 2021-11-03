@@ -434,6 +434,19 @@ h2 {
   align-items: flex-start;
   justify-content: center;
 }
+.grid-container-port-item {
+  margin: auto;
+  margin-bottom: 6rem;
+
+  padding: 0 1rem;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  padding-top: 5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
 .grid-container-exp {
   margin: auto;
   padding: 0 1rem;
@@ -478,13 +491,18 @@ h2 {
 .grid-container-md {
   max-width: 1200px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: stretch;
   gap: 3rem;
   margin: auto;
   padding: 0 2rem;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 575px) {
+  .grid-container-port-item {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 875px) {
   .grid-container-md {
     grid-template-columns: 1fr;
   }
@@ -550,6 +568,14 @@ h2 {
   border-radius: 1rem 1rem 0 0;
   background-color: gray;
   background-image: url("./assets/projects/placeholder.jpg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 150px;
+}
+.card-image-todo {
+  border-radius: 1rem 1rem 0 0;
+  background-color: gray;
+  background-image: url("./assets/projects/todo-2021-overview.jpg");
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   height: 150px;
@@ -679,4 +705,24 @@ textarea {
 
 .footer-content p {
   color: #b8bac7;
+}
+
+.feature-bullets {
+  margin: 1rem 0 2rem 0;
+  list-style-type: circle;
+}
+.feature-bullets li {
+  margin: 0 0 1rem 0;
+  line-height: 1.2rem;
+}
+
+.sidebar {
+  border: #ff5515 solid 1px;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.sidebar-subhead {
+  font-weight: 600;
+  color: #ff5515;
 }
