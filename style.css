@@ -466,6 +466,12 @@ h2 {
     display: flex !important;
     justify-content: space-around !important;
   }
+  .tech-text {
+    display: block !important;
+    text-align: center;
+
+    justify-content: space-around !important;
+  }
   .mx-item {
     display: flex;
     align-items: center;
@@ -508,6 +514,15 @@ h2 {
   }
 }
 .grid-container-mx {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  /* justify-content: stretch; */
+  justify-content: center;
+
+  gap: 0.5rem;
+  margin: 2rem 0 5rem 0;
+}
+.tech-text {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
   /* justify-content: stretch; */
