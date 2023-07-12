@@ -1,5 +1,5 @@
 pipelines:
-  portfolio:
+  pipe1:
     group: portfolio
     materials:
       mygit:  # this is the name of material
