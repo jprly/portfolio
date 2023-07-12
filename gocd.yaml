@@ -1,3 +1,8 @@
+format_version: 9
+environments:
+  testing:
+    environment_variables:
+      DEPLOYMENT: testing
 pipelines:
   repo-b-pipeline-one:
     group: pipeline-group-b
