@@ -13,3 +13,23 @@ pipelines:
               tasks:
                - exec: # indicates type of task
                    command: make
+                   arguments:
+                    - "build"
+    stages:
+      - test: # name of stage
+          jobs:
+            test: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: make
+                   arguments:
+                    - "test"
+    stages:
+      - build: # name of stage
+          jobs:
+            build: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: make
+                   arguments:
+                    - "deploy"
