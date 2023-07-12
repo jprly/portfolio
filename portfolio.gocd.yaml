@@ -1,30 +1,14 @@
 pipelines:
   pipe1:
-    group: portfolio
+    group: simple
     materials:
-      mygit: # this is the name of material
+      mygit:  # this is the name of material
         # says about type of material and url at once
-        git: https://github.com/jprly/portfolio.git
-        branch: main
+        git: http://my.example.org/mygit.git
     stages:
       - build: # name of stage
           jobs:
             build: # name of the job
               tasks:
-                - exec: # indicates type of task
-                    command: make
-                    arguments: build
-      - test: # name of stage
-          jobs:
-            test: # name of the job
-              tasks:
-                - exec: # indicates type of task
-                    command: make
-                    arguments: test
-      - deploy: # name of stage
-          jobs:
-            deploy: # name of the job
-              tasks:
-                - exec: # indicates type of task
-                    command: make
-                    arguments: deploy
+               - exec: # indicates type of task
+                   command: make
