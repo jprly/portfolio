@@ -1,0 +1,6 @@
+pipelines:
+  repo-b-pipeline-one:
+    group: pipeline-group-b
+    materials:
+      git:
+        type: config-repo
