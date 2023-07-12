@@ -15,7 +15,6 @@ pipelines:
                    command: make
                    arguments:
                     - "build"
-    stages:
       - test: # name of stage
           jobs:
             test: # name of the job
@@ -24,7 +23,6 @@ pipelines:
                    command: make
                    arguments:
                     - "test"
-    stages:
       - build: # name of stage
           jobs:
             build: # name of the job
