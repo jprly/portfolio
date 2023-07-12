@@ -12,19 +12,19 @@ pipelines:
             build: # name of the job
               tasks:
                - exec: # indicates type of task
-                   command: echo
-                   arguments: "building..."
+                   command: make
+                   arguments: build
       - test: # name of stage
           jobs:
             test: # name of the job
               tasks:
                - exec: # indicates type of task
-                   command: echo
-                   arguments: "testing..."
+                   command: make
+                   arguments: test
       - deploy: # name of stage
           jobs:
             deploy: # name of the job
               tasks:
                - exec: # indicates type of task
-                   command: echo
-                   arguments: "deploying..."
+                   command: make
+                   arguments: deploy
