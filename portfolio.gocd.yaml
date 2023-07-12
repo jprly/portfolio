@@ -12,7 +12,7 @@ pipelines:
             build: # name of the job
               tasks:
                - exec: # indicates type of task
-                   command: echo "build"
+                   command: git
       - test: # name of stage
           jobs:
             test: # name of the job
