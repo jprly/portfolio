@@ -1,5 +1,5 @@
 pipelines:
-  pipe1:
+  portfolio:
     group: portfolio
     materials:
       mygit:  # this is the name of material
@@ -12,16 +12,19 @@ pipelines:
             build: # name of the job
               tasks:
                - exec: # indicates type of task
-                   command: git
+                   command: echo
+                   arguments: "building..."
       - test: # name of stage
           jobs:
             test: # name of the job
               tasks:
                - exec: # indicates type of task
-                   command: echo "test"
+                   command: echo
+                   arguments: "testing..."
       - deploy: # name of stage
           jobs:
             deploy: # name of the job
               tasks:
                - exec: # indicates type of task
-                   command: echo "deploy"
+                   command: echo
+                   arguments: "deploying..."
