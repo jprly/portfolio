@@ -1,6 +1,6 @@
 pipelines:
   pipe1:
-    group: simple
+    group: portfolio
     materials:
       mygit:  # this is the name of material
         # says about type of material and url at once
@@ -12,4 +12,16 @@ pipelines:
             build: # name of the job
               tasks:
                - exec: # indicates type of task
-                   command: make
+                   command: echo "build"
+      - test: # name of stage
+          jobs:
+            test: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: echo "test"
+      - deploy: # name of stage
+          jobs:
+            deploy: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: echo "deploy"
