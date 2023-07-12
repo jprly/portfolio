@@ -23,7 +23,7 @@ pipelines:
                    command: make
                    arguments:
                     - "test"
-      - build: # name of stage
+      - deploy: # name of stage
           jobs:
             build: # name of the job
               tasks:
