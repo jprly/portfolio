@@ -330,11 +330,11 @@ h2 {
   text-decoration: none;
   font-weight: 600;
 }
-#portfolio-button {
+#projects-button {
   background-color: #ff5515;
   color: white;
 }
-#portfolio-button::before {
+#projects-button::before {
   background-color: white;
   padding: 1rem 3rem;
   border-radius: 1rem;
