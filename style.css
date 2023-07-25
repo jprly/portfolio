@@ -497,7 +497,7 @@ h2 {
 .grid-container-md {
   max-width: 1200px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: stretch;
   gap: 3rem;
   margin: auto;
@@ -575,6 +575,14 @@ h2 {
   border-radius: 1rem 1rem 0 0;
   background-color: gray;
   background-image: url("./assets/projects/jenkins-overview.jpg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 150px;
+}
+.card-image-ecs-tf {
+  border-radius: 1rem 1rem 0 0;
+  background-color: gray;
+  background-image: url("./assets/projects/ecs-tf-overview.jpg");
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   height: 150px;

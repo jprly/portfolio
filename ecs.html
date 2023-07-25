@@ -133,7 +133,7 @@
       >
         <div style="margin: auto; width: 100%; max-width: 800px">
           <img
-            src="./assets/projects/jenkins.png"
+            src="./assets/projects/gocd.png"
             style="width: 100%"
             alt=""
           />
@@ -141,7 +141,7 @@
       </div>
     </div>
     <div class="center" style="display: flex; justify-content: center">
-      <a href="https://github.com/jprly/Jenkins-terraform/blob/main/main.tf" style="text-decoration: none">
+      <a href="https://github.com/jprly/gocd-terraform" style="text-decoration: none">
         <div
           class="button-outline section-navigator"
           style="background-color: #ff5515; color: white"
@@ -151,7 +151,7 @@
         </div></a
       >
       <a
-        href="https://github.com/jprly/pipeline-demo/blob/main/Jenkinsfile"
+        href="https://github.com/jprly/pipeline-demo/blob/main/react.pipeline.gocd.yaml"
         style="text-decoration: none"
       >
         <div
@@ -159,25 +159,26 @@
           style="background-color: #ff5515; color: white"
           data-section="projects-section"
         >
-          View Jenkinsfile
+          View Pipeline as Code
         </div></a
       >
     </div>
     <div class="grid-container-port-item">
       <div class="">
-        <h2 class="subhead-about riley-highlight">CI/CD Pipeline with Jenkins</h2>
+        <h2 class="subhead-about riley-highlight">ECS Cluster with Terraform
+        </h2>
         <p class="copy">
-          A infrastructure as code project where terraform provisions a EC2 and installs a Jenkins server. A remote git repository uses a Jenkinsfile to build out the pipeline stages. The stages include building the project, running tests and deploying the built files.
+          This project uses Terraform to provision multiple resources to create a ECS cluster that connects to a EC2 GoCD server behind a ASG. Additionally repos can utilize GoCDs pipeline as code file to automatically define stages of the build process
+
         </p>
       </div>
       <div class="sidebar" style="display: grid; justify-items: center">
         <p class="sidebar-subhead">KEY FEATURES</p>
         <ul class="feature-bullets">
-          <li>Automated Pipeline</li>
-          <li>infrastructure as code using Terraform and Jenkinsfile</li>
-          <li>Running on EC2</li>
-          <li>Deployed to AWS S3</li>
-          <li>Build, Test and Deploy Stages</li>
+          <li>Infrastructure as Code (IaC)</li>
+          <li>ECS Cluster to scale agents(workers)</li>
+          <li>Dockerized Application</li>
+          <li>EC2 server behind Auto Scaling Group(ASG)</li>
         </ul>
         <p class="sidebar-subhead">TECH USED</p>
         <div class="mx-item">
